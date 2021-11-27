@@ -1,0 +1,77 @@
+.avatar {
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  border: 2px solid var(--border-color); 
+}
+
+.join-container {
+  background-color: var(--dark-bg);
+  min-width: 425px;
+  min-height: 300px;
+  width: fit-content;
+  border-radius: .5rem;
+  padding: 20px 10px;
+  z-index: 500;
+  position: relative;
+}
+
+.join-input, .join-select {
+  width: 100%;
+  height: 55px;
+  padding: 10px 13.5px;
+  border-radius: .5rem;
+  outline: none;
+  border: 2px solid var(--field-border-color);
+  background-color: var(--field-bg);
+  color: var(--light-text-color);
+  margin: 10px 0px 0px 0px;
+}
+
+.join-select {
+  cursor: pointer;
+}
+
+.join-input:focus, .join-select:focus {
+  border-color: var(--field-focus-color);
+}
+
+.join-button {
+  width: 100%;
+  background-color: var(--button-bg-color);
+  color: var(--light-text-color);
+  height: 45px;
+  margin: 10px 0px 0px 0px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: .3rem;
+  position: relative;
+  overflow: hidden;
+  transition: background-color .135s ease-in;
+  font-weight: 500;
+}
+
+.join-button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.error {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--error-bg);
+  color: var(--error-color);
+  transform: translateX(-500px);
+  transition: transform .65s ease;
+}
+
+.slide-in {
+  transform: translateX(0px);
+}
+
+@media screen and (orientation: portrait) and (max-width: 480px) {
+  .join-container {
+    min-width: 95% !important;
+  }
+}

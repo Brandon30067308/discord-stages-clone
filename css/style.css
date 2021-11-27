@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+  --dark-bg: #1f2937;
+  --tile-bg-alt: #171716;
+  --room-bg: #181a1c;
+  --field-bg: #1a222e;
+  --color-active: #373734;
+  --speaking-color: #059669;
+  --field-border-color: #253141;
+  --field-focus-color: #2e3d52;
+  --button-bg-color: #5b5df1;
+  --button-hover-color: #5154f0;
+  --light-text-color: #f2f2f2;
+  --dark-text-color: #292929;
+  --error-color: #b95e5b;
+  --error-bg :#f5d1d1;
+  --font-sm: 14px;
+  --font-md: 16.75px;
+  --font-lg: 1.125rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--font-md);
+  font-family: 'work sans';
+  color: var(--light-text-color);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#__next {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} 
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: pointer;
+  pointer-events: none;
+}
+
+/* utilities */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-start {
+  align-items: flex-start !important;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.flex-row-gap {
+  row-gap: 15px;
+}
+
+.flex-column-gap {
+  column-gap: 5px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-light {
+  color: var(--light-text-color);
+}
+
+.heading-lg {
+  font-size: var(--font-lg);
+  font-weight: 500;
+}
+
+.heading-sm {
+  font-size: var(--font-sm);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.loader {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and (orientation: portrait) and (max-width: 480px) {
+  .flex-wrap {
+    flex-direction: column !important;
+  }
+  :root {
+    --font-sm: 13.5px;
+    --font-md: 16px;
+    --font-lg: 1rem;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 310px) {
+  body {
+    overflow-x: auto;
+  }
+}
+

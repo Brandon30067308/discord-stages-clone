@@ -1,0 +1,106 @@
+.room-container {
+  background-color: var(--room-bg);
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 25px 20px;
+}
+
+.svg {
+  fill: #fff;
+}
+
+.speaker-tile {
+  padding: 1.5rem 3rem;
+  position: relative;
+  border: 2px solid hsl(60, 2%, 21%);
+  background-color: var(--tile-bg);
+  border-radius: .5rem;
+  width: 250px;
+}
+
+.speaking {
+  border: 2px solid var(--speaking-color);
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.permission-btn {
+  color: black;
+  padding: 5px 8.5px;
+  background: #fff;
+  font-size: var(--font-sm);
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mic-btn,
+.exit-btn {
+  padding: 12.5px;
+  height: 55px;
+  background-color: hsl(0, 84%, 60%);
+  transition: background-color .125s ease-in;
+}
+
+.exit-btn {
+  border-radius: 10rem;
+  font-weight: 500;
+}
+
+.exit-btn:hover, .mic-btn:hover {
+  background-color: hsl(0, 76%, 57%);
+  fill: hsl(0, 76%, 57%);
+}
+
+.mic-btn {
+  border-radius: 50%;
+  width: 55px;
+}
+
+.handraise-btn {
+  border: 2px solid var(--color-active);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+
+.room-header {
+  width: 100%;
+}
+
+.menu {
+  background-color: white;
+  color: var(--dark-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 15px);
+  border-radius: .5rem;
+  position: absolute;
+  right: 10px;
+  top: 28.5px;
+}
+
+.badge-container {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  width: fit-content;
+  height: auto;
+  padding: 2px;
+}
+
+@media screen and (orientation: portrait) and (max-width: 480px) {
+  .exit-btn {
+    width: max-content;
+  }
+
+  .speaker-tile {
+    width: 220px;
+  }
+}

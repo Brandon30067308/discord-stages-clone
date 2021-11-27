@@ -1,12 +1,29 @@
-import Link from 'next/link'
+import Head from 'next/head';
 
-export default function IndexPage() {
+import Join from '../components/Join';
+import Room from '../components/Room';
+import {
+  HMSRoomProvider,
+  selectIsConnectedToRoom,
+  useHMSStore
+} from '@100mslive/hms-video-react';
+
+const StagesApp = () => {
+  const isConnected = useHMSStore(selectIsConnectedToRoom);
+  console.log('is connected changed: ', isConnected);
+  // const isConnected = true;
+  return isConnected ? <Room /> : <Join />;
+};
+
+const App = () => {
   return (
-    <div>
-      Hello World.{' '}
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </div>
-  )
-}
+    <HMSRoomProvider>
+      <Head>
+        <title>Discord Stages Clone</title>
+      </Head>
+      <StagesApp />
+    </HMSRoomProvider>
+  );
+};
+
+export default App;
