@@ -9,7 +9,7 @@ import {
 import RoomStyles from '../Room.module.css';
 
 const PermissionsMenu = ({ audioTrack,
-  id }) => {
+  id, styles }) => {
   const hmsActions = useHMSActions();
 
   /* for moderators */
@@ -42,18 +42,14 @@ const PermissionsMenu = ({ audioTrack,
         <AiOutlineMenu
           size="20"
           className="absolute"
-          style={{ right: "10px" }}
+          style={{ right: "0px", ...styles }}
           onClick={() =>
             setShowMenu(!showMenu)}
         />
         {showMenu && (
           <div
             className={
-              `${RoomStyles['menu']}`}
-            style={{
-              backgroundColor: "#fff",
-              padding: "8.5px 5px"
-            }}>
+              `${RoomStyles['menu']}`}>
             <button
               className={`${RoomStyles['permission-btn']}`}
               onClick={() => mutePeer()}>

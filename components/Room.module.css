@@ -10,6 +10,20 @@
   fill: #fff;
 }
 
+.listener-tile {
+  width: 100px;
+  height: 115px;
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+
+.listener-tile .menu {
+  width: 100% !important;
+  background-color: #fff;
+  padding: 8.5px 5px;
+  right: 0px;
+}
+
 .speaker-tile {
   padding: 1.5rem 3rem;
   position: relative;
@@ -88,7 +102,7 @@
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
-  bottom: 60px;
+  bottom: 42px;
   right: 20px;
   width: fit-content;
   height: auto;

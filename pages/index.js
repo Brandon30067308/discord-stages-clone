@@ -10,8 +10,6 @@ import {
 
 const StagesApp = () => {
   const isConnected = useHMSStore(selectIsConnectedToRoom);
-  console.log('is connected changed: ', isConnected);
-  // const isConnected = true;
   return isConnected ? <Room /> : <Join />;
 };
 

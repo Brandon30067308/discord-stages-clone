@@ -1,15 +1,14 @@
 import Avatar from "boring-avatars";
 
+import RoomStyles from '../Room.module.css';
 import PermissionsMenu from "./PermissionsMenu";
 import HandRaiseBadge from './HandRaiseBadge';
 import getName from '../../utils/getName';
 
 const ListenerTile = ({ peer }) => {
-  console.log('peer parameter changed: ', console.log('new peer role: ', peer.role));
 
   return (
-    <div className="relative"
-      style={{ padding: "1.65rem" }}>
+    <div className={`${RoomStyles['listener-tile']} relative flex`}>
       <PermissionsMenu id={peer.id}
         audioTrack={peer.audioTrack} />
       <div className="flex flex-column flex-row-gap">

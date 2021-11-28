@@ -3,7 +3,6 @@ import { v4 } from 'uuid';
 export default async function
   getAuthToken(req, res) {
   try {
-    console.log('procees.env.: ', process.env.TOKEN_ENDPOINT);
     const { role } = JSON.parse(req.body);
 
     /* creates a new user and receives a token for the user */

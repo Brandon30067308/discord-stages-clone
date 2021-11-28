@@ -43,11 +43,9 @@ const Join = () => {
       });
       if (response.status === 500) {
         const { errMsg } = await response.json();
-        console.log('error message: ', errMsg);
         throw new Error(errMsg);
       }
       const { token } = await response.json();
-      setLoading(false);
       hmsActions.join({
         userName: name || 'Anonymous',
         authToken: token,

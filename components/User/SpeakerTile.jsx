@@ -19,7 +19,8 @@ const SpeakerTile = ({ peer }) => {
     <div className={`${RoomStyles['speaker-tile']} relative`}>
       <PermissionsMenu
         id={peer.id}
-        audioTrack={peer.audioTrack} />
+        audioTrack={peer.audioTrack}
+        styles={{ right: "3.5px", top: "5px" }} />
       <div className="flex flex-column flex-row-gap">
         <div className={`${isSpeaking &&
           RoomStyles['speaking']} flex`}>
