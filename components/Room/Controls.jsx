@@ -23,7 +23,7 @@ const Controls = () => {
 
   return (
     <div className="flex"
-      style={{ margin: "0 1rem", columnGap: "1rem" }}>
+      style={{ margin: ".85rem 1rem", columnGap: "1rem" }}>
       {!isListenerOrHandraised && (
         <MicButton isMicOn={isMicOn}
           toggleMic={() => {

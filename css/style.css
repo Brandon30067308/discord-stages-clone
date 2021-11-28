@@ -20,6 +20,12 @@
   --font-sm: 14px;
   --font-md: 16.75px;
   --font-lg: 1.125rem;
+  --menu-icon-height: 20px;
+  --speaker-tile-height: 160px;
+  --speaker-tile-right: 3.5px;
+  --listener-tile-right: 2px;
+  --speaker-tile-top: 2.5px;
+  --listener-tile-top: 0px;
 }
 
 * {
@@ -52,6 +58,10 @@ body {
   justify-content: center;
   position: relative;
 } 
+
+#__next .join-bg-image {
+  object-fit: cover !important;
+}
 
 button {
   outline: none;

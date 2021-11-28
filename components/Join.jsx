@@ -63,6 +63,7 @@ const Join = () => {
   return (
     <>
       <Image
+        className="join-bg-image"
         src="https://imgur.com/27iLD4R.png"
         alt="Login background"
         layout="fill"

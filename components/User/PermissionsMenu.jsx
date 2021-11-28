@@ -36,20 +36,20 @@ const PermissionsMenu = ({ audioTrack,
         style={{
           zIndex: "50",
           right: "0px",
-          top: "5px",
+          top: "2px",
           cursor: "pointer"
         }}>
         <AiOutlineMenu
           size="20"
-          className="absolute"
-          style={{ right: "0px", ...styles }}
+          className={`${RoomStyles['menu-icon']} absolute`}
           onClick={() =>
             setShowMenu(!showMenu)}
         />
         {showMenu && (
           <div
             className={
-              `${RoomStyles['menu']}`}>
+              `${RoomStyles['menu']}`}
+            style={styles}>
             <button
               className={`${RoomStyles['permission-btn']}`}
               onClick={() => mutePeer()}>

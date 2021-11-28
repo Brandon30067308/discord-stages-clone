@@ -15,22 +15,48 @@
   height: 115px;
   justify-content: flex-start;
   padding: 0 10px;
+  column-gap: .65rem;
+}
+
+.menu-icon {
+  height: var(--menu-icon-height);
 }
 
 .listener-tile .menu {
-  width: 100% !important;
+  width: calc(100% - var(--listener-tile-right));
   background-color: #fff;
   padding: 8.5px 5px;
-  right: 0px;
+  right: var(--listener-tile-right);
+  top: calc(var(--listener-tile-top) + var(--menu-icon-height) + 4px);
+}
+
+.listener-tile .menu-icon {
+  right: var(--listener-tile-right);
+  top: var(--listener-tile-top);
 }
 
 .speaker-tile {
   padding: 1.5rem 3rem;
+  column-gap: .65rem;
   position: relative;
   border: 2px solid hsl(60, 2%, 21%);
   background-color: var(--tile-bg);
   border-radius: .5rem;
   width: 250px;
+  height: var(--speaker-tile-height);
+}
+
+.speaker-tile .menu {
+  width: calc(100% - (2 * var(--speaker-tile-right)));
+  height: calc(var(--speaker-tile-height) - 55px);
+  justify-content: center;
+  top: calc(var(--speaker-tile-top) + var(--menu-icon-height) + 4px);
+  right: var(--speaker-tile-right);
+}
+
+.speaker-tile .menu-icon {
+  right: var(--speaker-tile-top);
+  top: 2.5px;
 }
 
 .speaking {
@@ -88,14 +114,12 @@
 .menu {
   background-color: white;
   color: var(--dark-text-color);
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 15px);
   border-radius: .5rem;
   position: absolute;
-  right: 10px;
-  top: 28.5px;
 }
 
 .badge-container {

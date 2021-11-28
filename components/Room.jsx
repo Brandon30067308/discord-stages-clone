@@ -33,7 +33,7 @@ const Room = () => {
           Speakers - {speakersAndModerators.length}
         </h3>
         <div className="flex flex-wrap flex-row-gap"
-          style={{ columnGap: ".5rem" }}>
+          style={{ columnGap: ".65rem", rowGap: "1rem" }}>
           {speakersAndModerators.map(
             speaker => (
               <SpeakerTile
@@ -45,7 +45,8 @@ const Room = () => {
           style={{ margin: '2rem 0' }}>
           Listeners - {listenersAndHandraised.length}
         </h3>
-        <div className="flex flex-wrap row-gap">
+        <div className="flex flex-wrap row-gap"
+          style={{ columnGap: ".85rem", rowGap: "1.5rem" }}>
           {listenersAndHandraised.map(
             listener => (
               <ListenerTile
