@@ -1,6 +1,6 @@
 import { MdOutlineFrontHand } from 'react-icons/md';
 
-import RoomStyles from '../Room.module.css';
+import RoomStyles from '../Room.module.scss';
 
 const HandRaiseButton =
   ({ toggleHandRaise, isHandRaised }) => {
@@ -10,8 +10,8 @@ const HandRaiseButton =
         className={`${RoomStyles['handraise-btn']} flex`}
         style={{
           backgroundColor: `${isHandRaised ?
-            'var(--color-active)' :
-            'var(--tile-bg)'}`
+            '#373734' :
+            '#171716'}`
         }}>
         <MdOutlineFrontHand size="22" />
       </button>

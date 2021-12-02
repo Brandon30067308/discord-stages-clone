@@ -1,0 +1,64 @@
+@import '../css/config';
+
+.join-container {
+  background-color: $dark-bg;
+  min-width: 425px;
+  min-height: 300px;
+  width: fit-content;
+  border-radius: .5rem;
+  padding: 20px 10px;
+  z-index: 500;
+
+  .avatar {
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+  }
+
+  .join-input, .join-select {
+    height: 55px;
+    padding: 10px 13.5px;
+    border-radius: .5rem;
+    border: 2px solid $field-border-color;
+    background-color: $field-bg;
+    color: $light-text-color;
+    margin: 10px 0px 0px 0px;
+
+    &:focus {
+      border-color: $field-focus-color;
+    }
+  }
+
+  .join-button {
+    background-color: $button-bg-color;
+    color: $light-text-color;
+    height: 45px;
+    margin: 10px 0px 0px 0px;
+    border-radius: .3rem;
+    overflow: hidden;
+    transition: background-color .135s ease-in;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $button-hover-color;
+    }
+
+    .error {
+      height: 100%;
+      background-color: $error-bg;
+      color: $error-color;
+      transform: translateX(-500px);
+      transition: transform .65s ease;
+    }
+
+    .slide-in {
+      transform: translateX(0px);
+    }
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 480px) {
+    & {
+      min-width: 95% !important;
+    }
+  }
+}

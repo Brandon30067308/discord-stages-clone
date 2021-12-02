@@ -2,7 +2,7 @@ import {
   useHMSStore, selectPeers
 } from '@100mslive/hms-video-react';
 
-import RoomStyles from './Room.module.css';
+import RoomStyles from './Room.module.scss';
 import RoomInfo from './Room/RoomInfo';
 import SpeakerTile from './User/SpeakerTile';
 import ListenerTile from './User/ListenerTile';
@@ -26,14 +26,14 @@ const Room = () => {
     <div
       className={`${RoomStyles['room-container']} flex flex-column space-between justify-start`}>
       <RoomInfo count={peers.length} />
-      <div className="w-100 flex flex-column align-start justify-start"
-        style={{ margin: "2rem 0", flex: "1 1 0%" }}>
+      <div className="w-100 flex flex-column align-start justify-start my-2"
+        style={{ flex: "1 1 0%" }}>
         <h3 className="heading-sm"
           style={{ marginBottom: '2rem' }}>
           Speakers - {speakersAndModerators.length}
         </h3>
         <div className="flex flex-wrap flex-row-gap"
-          style={{ columnGap: ".65rem", rowGap: "1rem" }}>
+          style={{ columnGap: ".75rem", rowGap: "1rem" }}>
           {speakersAndModerators.map(
             speaker => (
               <SpeakerTile
@@ -41,12 +41,10 @@ const Room = () => {
                 peer={speaker} />
             ))}
         </div>
-        <h3 className="heading-sm"
-          style={{ margin: '2rem 0' }}>
+        <h3 className="heading-sm my-2">
           Listeners - {listenersAndHandraised.length}
         </h3>
-        <div className="flex flex-wrap row-gap"
-          style={{ columnGap: ".85rem", rowGap: "1.5rem" }}>
+        <div className="flex flex-wrap row-gap flex-column-gap-2 flex-row-gap-2">
           {listenersAndHandraised.map(
             listener => (
               <ListenerTile

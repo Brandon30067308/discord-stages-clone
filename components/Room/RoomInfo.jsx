@@ -1,10 +1,10 @@
 import { GoBroadcast } from 'react-icons/go';
 import { FiUsers } from 'react-icons/fi';
-import RoomStyles from '../Room.module.css';
+import RoomStyles from '../Room.module.scss';
 
 const RoomInfo = ({ count }) => {
   return (<div
-    className={`${RoomStyles['room-header']} flex space-between`}>
+    className={`${RoomStyles['room-header']} flex space-between w-100`}>
     <h3
       className="heading-lg text-light flex"
     >

@@ -1,4 +1,4 @@
-import JoinStyles from '../Join.module.css';
+import JoinStyles from '../Join.module.scss';
 import Loader from '../common/Loader';
 
 const JoinButton = ({ joinRoom,
@@ -8,14 +8,14 @@ const JoinButton = ({ joinRoom,
     <button
       type="submit"
       disabled={loading || error}
-      className={`${JoinStyles['join-button']} flex`}
+      className={`${JoinStyles['join-button']} flex relative w-100`}
       style={{ columnGap: ".4rem" }}
       onClick={joinRoom}>
       Join
       {loading && <Loader />}
       <div
         ref={errRef}
-        className={`flex flex-column-gap ${JoinStyles['error']}`}>
+        className={`${JoinStyles['error']} flex flex-column-gap w-100 absolute`}>
         Error...
       </div>
     </button>

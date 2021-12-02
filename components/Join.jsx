@@ -7,7 +7,7 @@ import { useHMSActions } from '@100mslive/hms-video-react';
 import NameInput from './Join/NameInput';
 import RoleSelect from './Join/RoleSelect';
 import JoinButton from './Join/JoinButton';
-import JoinStyles from './Join.module.css';
+import JoinStyles from './Join.module.scss';
 
 let timeoutId;
 
@@ -69,7 +69,7 @@ const Join = () => {
         layout="fill"
       />
       <div
-        className={`${JoinStyles['join-container']} flex flex-column`}>
+        className={`${JoinStyles['join-container']} flex flex-column relative`}>
         <Avatar name={name}
           variant="marble" size="80" />
         <NameInput name={name}

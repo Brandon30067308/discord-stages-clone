@@ -1,6 +1,6 @@
 import { MicOffIcon, MicOnIcon } from '@100mslive/hms-video-react';
 
-import RoomStyles from '../Room.module.css';
+import RoomStyles from '../Room.module.scss';
 
 const MicButton = ({ isMicOn, toggleMic }) => {
   return (

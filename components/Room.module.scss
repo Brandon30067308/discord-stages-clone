@@ -1,0 +1,152 @@
+@import '../css/config';
+
+.room-container {
+  background-color: $room-bg;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 25px 20px;
+
+  .svg {
+    fill: #fff;
+  }
+
+  .menu-icon {
+    height: $menu-icon-height;
+  }
+
+  .permission-menu {
+    .permission-btn {
+      color: #000;
+      padding: 5px 8.5px;
+      background: #fff;
+      font-size: $font-sm;
+      border: none;
+      outline: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .menu {
+      background-color: #fff;
+      color: $dark-text-color;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: .5rem;
+      position: absolute;
+    }
+  }
+
+  .listener-tile {
+    width: 100px;
+    height: 115px;
+    justify-content: flex-start;
+    padding: 0 10px;
+
+    .menu {
+      width: calc(100% - $listener-tile-right);
+      background-color: #fff;
+      padding: 8.5px 5px;
+      right: $listener-tile-right;
+      top: calc($listener-tile-top + $menu-icon-height + 4px);
+    }
+
+    .menu-icon {
+      right: $listener-tile-right;
+      top: $listener-tile-top;
+    }
+
+    .badge-container {
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 42px;
+      right: 20px;
+      width: fit-content;
+      height: auto;
+      padding: 2px;
+
+      .badge-icon {
+        fill: $color-active;
+      }
+    }    
+  }
+
+  .speaker-tile {
+    padding: 1.5rem 3rem;
+    border: 3px solid #373734;
+    background-color: $tile-bg-alt;
+    border-radius: .5rem;
+    width: 250px;
+    height: $speaker-tile-height;
+
+    .menu {
+      width: calc(100% - (2 * $speaker-tile-right));
+      height: calc($speaker-tile-height - 55px);
+      justify-content: center;
+      top: calc($speaker-tile-top + $menu-icon-height + 4px);
+      right: $speaker-tile-right;
+    }
+
+    .menu-icon {
+      right: $speaker-tile-right;
+      top: $speaker-tile-top;
+    }
+
+    .speaking {
+      border: 3px solid $speaking-color;
+      padding: 2px;
+      border-radius: 50%;
+    }
+  }
+
+  .controls {
+    .mic-btn,
+    .exit-btn {
+      padding: 12.5px;
+      height: 55px;
+      background-color: #ef4343;
+      transition: background-color .125s ease-in;
+
+      &:hover {
+        background-color: #e53e3e;
+        fill: #e53e3e;
+      }
+    }
+
+    .exit-btn {
+      border-radius: 10rem;
+      font-weight: 500;
+    }
+
+    .mic-btn {
+      border-radius: 50%;
+      width: 55px;
+    }
+
+    .handraise-btn {
+      border: 2px solid $color-active;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+
+      .handraise-icon {
+        height: 22px;
+        width: 22px;
+        fill: $color-active;
+      }
+    }
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 480px) {
+    .exit-btn {
+      width: max-content;
+    }
+
+    .speaker-tile {
+      width: 220px;
+    }
+  }
+}

@@ -18,7 +18,6 @@ export default async function
 
     /* respond with token received from 100ms */
     const { token } = await response.json();
-    console.log('token: ', token)
     res.status(200).json({ token });
   } catch (error) {
     console.log('error while trying to get auth token: ', error);

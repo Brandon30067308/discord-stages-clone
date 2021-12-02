@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import MicButton from './MicButton';
 import ExitButton from './ExitButton';
 import HandRaiseButton from './HandRaiseButton';
@@ -9,6 +8,8 @@ import {
   selectLocalPeer,
   useHMSNotifications
 } from '@100mslive/hms-video-react';
+
+import RoomStyles from '../Room.module.scss';
 
 const Controls = () => {
   const hmsActions = useHMSActions();
@@ -22,8 +23,7 @@ const Controls = () => {
     peer.roleName === 'listener' || peer.roleName === 'handraise';
 
   return (
-    <div className="flex"
-      style={{ margin: ".85rem 1rem", columnGap: "1rem" }}>
+    <div className={`${RoomStyles['controls']} flex flex-column-gap-1 m-1`}>
       {!isListenerOrHandraised && (
         <MicButton isMicOn={isMicOn}
           toggleMic={() => {

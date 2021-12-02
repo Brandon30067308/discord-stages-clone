@@ -1,6 +1,6 @@
 import { BiExit } from 'react-icons/bi';
 
-import RoomStyles from '../Room.module.css';
+import RoomStyles from '../Room.module.scss';
 
 const ExitButton = ({ exitRoom }) => {
   return (

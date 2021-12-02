@@ -6,7 +6,7 @@ import {
   useHMSActions
 } from '@100mslive/hms-video-react';
 
-import RoomStyles from '../Room.module.css';
+import RoomStyles from '../Room.module.scss';
 
 const PermissionsMenu = ({ audioTrack,
   id, styles }) => {
@@ -32,7 +32,7 @@ const PermissionsMenu = ({ audioTrack,
   if (isModerator) {
     return (
       <div
-        className="absolute w-100"
+        className={`${RoomStyles['permission-menu']} w-100 absolute`}
         style={{
           zIndex: "50",
           right: "0px",
@@ -51,16 +51,16 @@ const PermissionsMenu = ({ audioTrack,
               `${RoomStyles['menu']}`}
             style={styles}>
             <button
-              className={`${RoomStyles['permission-btn']}`}
+              className={`${RoomStyles['permission-btn']} w-100`}
               onClick={() => mutePeer()}>
               Mute
             </button>
             <button
-              className={`${RoomStyles['permission-btn']}`}
+              className={`${RoomStyles['permission-btn']} w-100`}
               onClick={() => changeRole('listener')}>
               Make Listener
             </button>
-            <button className={`${RoomStyles['permission-btn']}`}
+            <button className={`${RoomStyles['permission-btn']} w-100`}
               onClick={() => changeRole('speaker')}>
               Make Speaker
             </button>

@@ -8,7 +8,7 @@ import {
 import Avatar from 'boring-avatars';
 
 import PermissionsMenu from './PermissionsMenu';
-import RoomStyles from '../Room.module.css';
+import RoomStyles from '../Room.module.scss';
 import getName from '../../utils/getName';
 
 const SpeakerTile = ({ peer }) => {
@@ -16,7 +16,7 @@ const SpeakerTile = ({ peer }) => {
   const isMicOn = useHMSStore(selectIsPeerAudioEnabled(peer.id));
 
   return (
-    <div className={`${RoomStyles['speaker-tile']} relative`}>
+    <div className={`${RoomStyles['speaker-tile']} relative flex-column-gap-1`}>
       <PermissionsMenu
         id={peer.id}
         audioTrack={peer.audioTrack} />
